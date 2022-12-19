@@ -28,7 +28,10 @@ footer {
 }
 
 .temperature-units {
-  font-size: 16px;
+  font-size: 14px;
+  position: relative;
+  top: -14px;
+  left: -16px;
 }
 
 .weather-details {
