@@ -20,8 +20,46 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    
-      <script src="src/app.js"></script>
+    <div class="container">
+      <form id="city-form">
+        <div class="form-group">
+          <label for="exampleInputCity1"></label>
+          <input type="text" class="form-control" placeholder="Enter city" />
+        </div>
+        <button
+          id="search-button"
+          type="submit"
+          class="btn btn-primary search-button"
+        >
+          Search
+        </button>
+        <button id="current-button" type="button" class="btn btn-success">
+          Current
+        </button>
+      </form>
+      <br />
+      <div class="row">
+        <div class="col">
+          <h1>Lexington</h1>
+          <li id="description"></li>
+          <h4>Monday 2:00PM</h4>
+          <h2>
+            ☀️<span class="temperature" id="temperature">19</span>
+            <span class="temperature-units">
+              <a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+          </h2>
+        </div>
+        <div class="weather-details col">
+          <p>
+            Humidity: <span id="humidity"></span> %
+            <br />
+            Wind: <span id="wind"></span> mph
+          </p>
+        </div>
+      </div>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
