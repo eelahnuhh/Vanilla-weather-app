@@ -1,8 +1,9 @@
 .container {
   border: 1px solid rgb(0, 106, 255);
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
   margin: 100px auto;
+  margin-bottom: 0px;
   max-width: 600px;
   font-family: "Silkscreen", cursive;
 }
@@ -17,10 +18,9 @@ li {
 }
 
 footer {
-  text-align: ceter;
   font-size: 10px;
-  padding: 10px;
-  margin-top: 10px;
+  margin: 10px auto;
+  max-width: 600px;
 }
 
 .temperature {
