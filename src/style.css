@@ -45,3 +45,8 @@ footer {
 .card {
   text-align: center;
 }
+
+.temperature-units .active {
+  color: black;
+  text-decoration: none;
+}
