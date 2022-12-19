@@ -48,7 +48,8 @@ let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", city);
 
 function showTemperature(response) {
-  let temp = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  let temp = Math.round(celsiusTemperature);
   let city = response.data.name;
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${city}`;
