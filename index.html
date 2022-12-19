@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -26,16 +27,16 @@
           <label for="exampleInputCity1"></label>
           <input type="text" class="form-control" placeholder="Enter city" />
         </div>
-        <div
+        <button
           id="search-button"
           type="submit"
           class="btn btn-primary search-button"
         >
           Search
-        </div>
-        <div id="current-button" type="button" class="btn btn-success">
+        </button>
+        <button id="current-button" type="button" class="btn btn-success">
           Current
-        </div>
+        </button>
       </form>
       <br />
       <div class="row">
