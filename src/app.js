@@ -21,6 +21,31 @@ if (minutes < 10) {
 let h4 = document.querySelector("h4");
 h4.innerHTML = `${day} ${hour}:${minutes}`;
 
+function displayForecast() {
+  let forecast = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+      <div class="col-2" style="width: 18rem">
+        <div class="weather-forecast-date">
+          ${day}
+        </div>
+        <img class="weather-forecast-img"src="http://openweathermap.org/img/wn/50d@2x.png"🌤️/>
+        <div class="weather-forecast-temp">
+          <span class="weather-forecast-temp-max">77°</span>
+          <span class="weather-forecast-temp-min">56°</span>
+        </div>
+      </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 function getTemperature(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
@@ -103,3 +128,5 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+displayForecast("");
