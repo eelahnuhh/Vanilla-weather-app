@@ -1,11 +1,16 @@
 .container {
-  border: 1px solid rgb(0, 106, 255);
+  border: 1px solid rgb(0, 255, 213);
   border-radius: 10px;
   padding: 20px;
   margin: 100px auto;
   margin-bottom: 0px;
   max-width: 600px;
   font-family: "Silkscreen", cursive;
+  background: white;
+}
+
+body {
+  background: #b1f4cf;
 }
 
 h4 {
@@ -49,4 +54,26 @@ footer {
 .temperature-units .active {
   color: black;
   text-decoration: none;
+}
+
+.weather-forecast {
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.weather-forecast-temp {
+  font-size: 12px;
+}
+
+.weather-forecast-temp-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-img {
+  margin: 0 auto;
+  width: 45px;
 }
