@@ -27,6 +27,10 @@ li {
   text-shadow: 2px 2px 0px black;
 }
 
+.search-button {
+  font-size: 13px;
+}
+
 footer {
   font-size: 8px;
   margin: 10px auto;

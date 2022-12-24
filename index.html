@@ -18,25 +18,32 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/9874efb785.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <form id="city-form">
-        <div class="form-group">
+      <form id="city-form" class="form-inline">
+        <div class="form-group mb-2">
           <label for="exampleInputCity1"></label>
           <input type="text" class="form-control" placeholder="Enter City" />
         </div>
         <button
           id="search-button"
           type="submit"
-          class="btn btn-primary search-button"
+          class="btn btn-primary search-button mx-sm-3 mb-2"
         >
           Search
         </button>
-        <button id="current-button" type="button" class="btn btn-success">
-          Current
-        </button>
+        <i
+          type="button"
+          id="current-button"
+          class="fa-solid fa-location-dot fa-lg mb-2"
+        >
+        </i>
       </form>
       <br />
       <div class="row">
@@ -48,7 +55,7 @@
             <span
               ><img
                 id="icon"
-                src="http://openweathermap.org/img/wn/50d@2x.png"
+                src="https://openweathermap.org/img/wn/50d@2x.png"
                 alt=""
                 width="60" /></span
             ><span class="temperature" id="temperature">0</span>
@@ -64,7 +71,9 @@
       <div class="weather-forecast" id="weather-forecast"></div>
       <hr />
       <footer>
-        <a href="https://github.com/eelahnuhh/Weather-app"> Open-source code</a>
+        <a href="https://github.com/eelahnuhh/Vanilla-weather-app">
+          Open-source code</a
+        >
         by Ilana Smalls
       </footer>
     </div>
