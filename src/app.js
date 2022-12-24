@@ -114,6 +114,7 @@ function showTemperature(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  getForecast(response.data.coord);
 }
 
 function showPosition(position) {
