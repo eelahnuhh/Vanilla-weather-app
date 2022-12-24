@@ -21,25 +21,41 @@ if (minutes < 10) {
 let h4 = document.querySelector("h4");
 h4.innerHTML = `${day} ${hour}:${minutes}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
+  let dailyForecast = response.data.daily;
   let forecast = document.querySelector("#weather-forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      ` 
-      <div class="col-2" style="width: 18rem">
+  dailyForecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        ` 
+      <div class="col-2">
         <div class="weather-forecast-date">
-          ${day}
+          ${formatDay(forecastDay.dt)}
         </div>
-        <img class="weather-forecast-img"src="http://openweathermap.org/img/wn/50d@2x.png"🌤️/>
+        <img class="weather-forecast-img"src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png"/>
         <div class="weather-forecast-temp">
-          <span class="weather-forecast-temp-max">77°</span>
-          <span class="weather-forecast-temp-min">56°</span>
+          <span class="weather-forecast-temp-max"> ${Math.round(
+            forecastDay.temp.max
+          )}° </span>
+          <span class="weather-forecast-temp-min"> ${Math.round(
+            forecastDay.temp.min
+          )}° </span>
         </div>
       </div>
     `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -63,6 +79,11 @@ function getTemperature(response) {
   let temp = Math.round(fahrenheitTemperature);
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = `${temp}`;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   getForecast(response.data.coord);
 }
 

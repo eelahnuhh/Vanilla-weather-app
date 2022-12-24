@@ -1,5 +1,5 @@
 .container {
-  border: 1px solid rgb(0, 255, 213);
+  border: 1px solid navy;
   border-radius: 10px;
   padding: 20px;
   margin: 100px auto;
@@ -10,7 +10,9 @@
 }
 
 body {
-  background: #b1f4cf;
+  background-repeat: no-repeat;
+  background-image: url("https://media2.giphy.com/media/c2CDTcHLscXaU5s1vK/giphy.gif?cid=ecf05e47a0y68hy011oj50qmmm4u1ybo50088a2zcgegcnw0&rid=giphy.gif&ct=g");
+  background-size: cover;
 }
 
 h4 {
@@ -23,9 +25,10 @@ li {
 }
 
 footer {
-  font-size: 10px;
+  font-size: 8px;
   margin: 10px auto;
   max-width: 600px;
+  margin-bottom: 0px;
 }
 
 .temperature {
