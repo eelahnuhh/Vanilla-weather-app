@@ -1,7 +1,7 @@
 .container {
   border: 1px solid navy;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 15px;
   margin: 100px auto;
   margin-bottom: 0px;
   max-width: 600px;
@@ -17,7 +17,7 @@ body {
 
 h4 {
   opacity: 0.6;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 li {
@@ -29,6 +29,12 @@ li {
 
 .search-button {
   font-size: 13px;
+}
+
+img {
+  margin: -8px;
+  position: relative;
+  top: -3px;
 }
 
 footer {
@@ -50,11 +56,7 @@ footer {
 }
 
 .weather-details {
-  font-size: 15px;
-}
-
-.emoji {
-  font-size: 22px;
+  font-size: 12px;
 }
 
 .weather-forecast {
